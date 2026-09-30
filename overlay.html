@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>黑魂重制版 3D地图</title>
+  <link rel="stylesheet" href="overlay.css">
+  <script src="js/lib/three-r73.min.js"></script>
+  <script src="js/lib/underscore-1.8.3.min.js"></script>
+  <script src="js/Config.js"></script>
+  <script src="js/BigShader.js"></script>
+  <script src="js/Collectibles.generated.js"></script>
+  <script src="js/Secrets.generated.js"></script>
+  <script src="js/Exploration.generated.js"></script>
+</head>
+<body>
+  <main id="viewport" aria-label="3D 地图视图"></main>
+
+  <header id="toolbar">
+    <span class="brand">DSR 3D 地图</span>
+    <div class="controls">
+      <select id="mapSelect" aria-label="选择地图"></select>
+      <button id="compactButton" type="button" title="恢复到右上角小悬浮窗">小窗</button>
+      <button id="resetButton" type="button" title="重置视角">复位</button>
+      <button id="edgeButton" type="button" class="active" title="显示或隐藏边线">边线</button>
+      <button id="routeButton" type="button" class="active" title="显示或隐藏推荐探索路线">路线</button>
+      <button id="itemButton" type="button" class="active" title="显示或隐藏重要道具与防具；普通消耗品已隐藏">收集</button>
+      <button id="bonfireButton" type="button" class="active collectible-toggle bonfire" title="显示或隐藏所有篝火位置">火</button>
+      <button id="weaponButton" type="button" class="active collectible-toggle weapon" title="显示或隐藏地图内可拾取武器与盾牌">武</button>
+      <button id="ringButton" type="button" class="active collectible-toggle ring" title="显示或隐藏地图内可拾取戒指">戒</button>
+      <button id="spellButton" type="button" class="active collectible-toggle spell" title="显示或隐藏地图内可拾取魔法、奇迹、咒术和暗术">法</button>
+      <button id="npcButton" type="button" class="active collectible-toggle npc" title="显示或隐藏NPC位置">人</button>
+      <button id="secretButton" type="button" class="active collectible-toggle secret" title="显示或隐藏幻影墙、光照密门和隐藏入口">秘</button>
+      <button id="autoRegionButton" type="button" class="active" title="自动跟随游戏区域；手动选择地图时暂停切换">自动区域</button>
+      <button id="followButton" type="button" class="active" title="让视角聚焦并跟随玩家附近区域">跟随</button>
+      <button id="viewButton" type="button" class="active" title="跟随游戏相机方向并自动切换无遮挡机位">视角</button>
+      <button id="interiorButton" type="button" class="active" title="自动检测室内并剖切玩家头顶的屋顶和上层结构">层</button>
+      <button id="languageButton" type="button" title="切换到英文">EN</button>
+      <button id="lockButton" type="button" title="锁定后鼠标会穿透悬浮窗">锁定</button>
+      <button id="hideButton" type="button" title="隐藏悬浮窗">隐藏</button>
+    </div>
+  </header>
+
+  <section id="routePanel" aria-label="探索路线关键点"></section>
+  <section id="itemPanel" aria-label="全收集、篝火、武器、戒指、法术、NPC与隐藏入口标记"></section>
+  <div id="gamepadStatus" role="status">手柄地图模式</div>
+  <div id="playerStatus" role="status">实时定位：等待游戏</div>
+  <div id="status" role="status">正在初始化…</div>
+  <div id="hint">左键拖动旋转 · 右键拖动平移 · 滚轮缩放 · 双击复位</div>
+
+  <script src="overlay.js"></script>
+</body>
+</html>

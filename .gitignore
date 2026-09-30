@@ -1,0 +1,35 @@
+# Local builds, releases and old deployments
+**/bin/
+**/obj/
+/publish*/
+/artifacts/
+/backup*/
+.vs/
+*.user
+*.suo
+*.log
+__pycache__/
+*.pyc
+
+# Raw game extraction, live character diagnostics and one-off repair scripts
+/tools/game-data.json
+/tools/live-reader-snapshot.json
+/tools/heading-samples.json
+/tools/*-report.json
+/tools/*-qa.png
+/tools/references/
+/tools/DSRHook.reference.cs.txt
+/tools/overlay-before-*.js
+/tools/probe-map.py
+/tools/inspect-references.py
+/tools/upgrade_frontend.py
+/tools/verify_heading.py
+/tools/analyze-heading.py
+/preview*.png
+
+# Credentials and machine-local configuration
+.env
+.env.*
+*.pem
+*.key
+*.pfx

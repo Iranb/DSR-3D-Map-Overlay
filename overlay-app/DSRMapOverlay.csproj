@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.4129.50" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="..\overlay.html" Link="web\overlay.html" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="..\overlay.css" Link="web\overlay.css" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="..\overlay.js" Link="web\overlay.js" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="..\js\**\*" Link="web\js\%(RecursiveDir)%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="..\data\ds1\**\*" Link="web\data\ds1\%(RecursiveDir)%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>
